@@ -1,0 +1,19 @@
+﻿<Window x:Class="OOD_LabWeek1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOD_LabWeek1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock x:Name="TBlkBands" HorizontalAlignment="Left" Margin="124,59,0,0" TextWrapping="Wrap" Text="Bands" VerticalAlignment="Top" Height="39" Width="93" TextAlignment="Center" FontSize="24"/>
+        <TextBlock x:Name="TBlkGenre" HorizontalAlignment="Left" Margin="139,99,0,0" TextWrapping="Wrap" Text="Genre" VerticalAlignment="Top" RenderTransformOrigin="-0.145,0.514" FontSize="14"/>
+        <TextBlock x:Name="TblkBandInfo" HorizontalAlignment="Left" Margin="501,66,0,0" TextWrapping="Wrap" Text="Band Information" VerticalAlignment="Top" FontSize="24"/>
+        <TextBlock x:Name="TblkAlbum" HorizontalAlignment="Left" Margin="501,217,0,0" TextWrapping="Wrap" Text="Albums" VerticalAlignment="Top" FontSize="24"/>
+        <ListBox x:Name="LtBxBandNames" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="139,130,490,55"/>
+        <ListBox x:Name="LtBxxAlbumName" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="501,255,129,55"/>
+        <ComboBox x:Name="CombxGenreType" HorizontalAlignment="Left" Margin="190,98,0,0" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>
