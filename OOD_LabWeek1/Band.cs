@@ -15,18 +15,19 @@ namespace OOD_LabWeek1
 
         public string bandName { get; set; }
 
+        public List<Album> albumList { get; set; }
+
         //constructers
         public Band(int banddateformed,string membername, string bandname)
         {
             bandDateFormed = banddateformed;
             memberName = membername;
             bandName = bandname;
+
+            albumList = new List<Album>();
         }
 
-        public Band()
-        {
-
-        }
+        public Band() : this (1960, "Unknown", "Unknown") { }
 
         //methods
 

@@ -11,7 +11,7 @@
         <TextBlock x:Name="TBlkGenre" HorizontalAlignment="Left" Margin="90,103,0,0" TextWrapping="Wrap" Text="Genre" VerticalAlignment="Top" RenderTransformOrigin="-0.145,0.514" FontSize="14"/>
         <TextBlock x:Name="TblkBandInfo" HorizontalAlignment="Left" Margin="501,66,0,0" TextWrapping="Wrap" Text="Band Information" VerticalAlignment="Top" FontSize="24"/>
         <TextBlock x:Name="TblkAlbum" HorizontalAlignment="Left" Margin="501,217,0,0" TextWrapping="Wrap" Text="Albums" VerticalAlignment="Top" FontSize="24"/>
-        <ListBox x:Name="LtBxBandNames" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="90,130,490,55"/>
+        <ListBox x:Name="LtBxBandNames" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="90,130,490,55" SelectionChanged="LtBxBandNames_SelectionChanged"/>
         <ListBox x:Name="LtBxxAlbumName" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="501,255,114,55"/>
         <ComboBox x:Name="CombxGenreType" HorizontalAlignment="Left" Margin="176,102,0,0" VerticalAlignment="Top" Width="120"/>
         <TextBlock x:Name="TBlkBandDate" HorizontalAlignment="Left" Margin="501,115,0,0" TextWrapping="Wrap" Text="BandDate" VerticalAlignment="Top" FontSize="14"/>

@@ -36,6 +36,22 @@ namespace OOD_LabWeek1
             PopBand b5 = new PopBand() { bandName = "My Chemical Romance", bandDateFormed = 2001, memberName = "Gerard Way, Ray Toro, Mikey Way, Frank Iero" };
             ElectronicBand b6 = new ElectronicBand() { bandName = "Daft Punk", bandDateFormed = 1993, memberName = "Guy-Manuel de Homem-Christo, Thomas Bangalter" };
 
+            Random rng = new Random();
+
+            Album A1 = new Album() { albumName = "Songs with hidden meaning", releasedDate = rng.Next(1986,2023) , sales = rng.Next(1,10000000)};
+            Album A2 = new Album() { albumName = "Aerosmith", releasedDate = rng.Next(1973,2023), sales = rng.Next(1,100000000)};
+            Album A3 = new Album() { albumName = "Just that one song that was super popular", releasedDate = rng.Next(1997,2023), sales = rng.Next(1, 100000000) };
+            Album A4 = new Album() { albumName = "Yellow Submarine", releasedDate = rng.Next(1960,2023), sales = rng.Next(1, 100000000) };
+            Album A5 = new Album() { albumName = "Songs Kids Who Pretend To Be Edgy Listen Too", releasedDate = rng.Next(2001,2023), sales = rng.Next(1, 100000000) };
+            Album A6 = new Album() { albumName = "Various Sounds", releasedDate = rng.Next(1993,2023), sales = rng.Next(1, 100000000) };
+
+            b1.albumList.Add(A1);
+            b2.albumList.Add(A2);
+            b3.albumList.Add(A3);
+            b4.albumList.Add(A4);
+            b5.albumList.Add(A5);
+            b6.albumList.Add(A6);
+
             allBands.Add(b1);
             allBands.Add(b2);
             allBands.Add(b3);
@@ -46,6 +62,13 @@ namespace OOD_LabWeek1
             allBands.Sort();
 
             LtBxBandNames.ItemsSource = allBands;
+        }
+
+        private void LtBxBandNames_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Band selectedBand = LtBxBandNames.SelectedItem as Band;
+
+            if(selectedBand)
         }
     }
 }
