@@ -14,6 +14,8 @@
         <ListBox x:Name="LtBxBandNames" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="139,130,490,55"/>
         <ListBox x:Name="LtBxxAlbumName" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="501,255,129,55"/>
         <ComboBox x:Name="CombxGenreType" HorizontalAlignment="Left" Margin="190,98,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="TBlkBandDate" HorizontalAlignment="Left" Margin="501,115,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock x:Name="TblkBandMembers" HorizontalAlignment="Left" Margin="501,154,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="14" Width="185" Height="58"/>
 
     </Grid>
 </Window>
