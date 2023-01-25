@@ -32,7 +32,7 @@ namespace OOD_LabWeek1
 
         public override string ToString()
         {
-            return string.Format($"{albumName} {releasedDate} {sales}");
+            return string.Format($"{albumName} - released in {releasedDate}, sold {sales} copies");
         }
 
     }

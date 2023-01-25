@@ -29,6 +29,9 @@ namespace OOD_LabWeek1
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            string[] genres = { "All", "Rock", "Pop", "Indie", "Electronic" };
+            CombxGenreType.ItemsSource = genres;
+
             PopBand b1 = new PopBand() { bandName = "Green Day",bandDateFormed =1986 , memberName = "Billie Joe Armstrong, Mike Dirnt, Tre Cool"};
             RockBand b2 = new RockBand() { bandName = "AC/DC", bandDateFormed = 1973, memberName = "Brian Johnson, Bon Scott, Dave Evans, Axl Rose"};
             IndieBand b3 = new IndieBand() { bandName = "The White Stripes", bandDateFormed = 1997, memberName = "Jack White, Meg White" };
@@ -38,12 +41,12 @@ namespace OOD_LabWeek1
 
             Random rng = new Random();
 
-            Album A1 = new Album() { albumName = "Songs with hidden meaning", releasedDate = rng.Next(1986,2023) , sales = rng.Next(1,10000000)};
-            Album A2 = new Album() { albumName = "Aerosmith", releasedDate = rng.Next(1973,2023), sales = rng.Next(1,100000000)};
-            Album A3 = new Album() { albumName = "Just that one song that was super popular", releasedDate = rng.Next(1997,2023), sales = rng.Next(1, 100000000) };
-            Album A4 = new Album() { albumName = "Yellow Submarine", releasedDate = rng.Next(1960,2023), sales = rng.Next(1, 100000000) };
-            Album A5 = new Album() { albumName = "Songs Kids Who Pretend To Be Edgy Listen Too", releasedDate = rng.Next(2001,2023), sales = rng.Next(1, 100000000) };
-            Album A6 = new Album() { albumName = "Various Sounds", releasedDate = rng.Next(1993,2023), sales = rng.Next(1, 100000000) };
+            Album A1 = new Album() { albumName = "Songs with hidden meaning", releasedDate = rng.Next(1986,2023) , sales = rng.Next(1,100000)};
+            Album A2 = new Album() { albumName = "Aerosmith", releasedDate = rng.Next(1973,2023), sales = rng.Next(1,100000)};
+            Album A3 = new Album() { albumName = "Just that one song that was super popular", releasedDate = rng.Next(1997,2023), sales = rng.Next(1, 100000) };
+            Album A4 = new Album() { albumName = "Yellow Submarine", releasedDate = rng.Next(1960,2023), sales = rng.Next(1, 100000) };
+            Album A5 = new Album() { albumName = "Songs Kids Who Pretend To Be Edgy Listen Too", releasedDate = rng.Next(2001,2023), sales = rng.Next(1, 100000) };
+            Album A6 = new Album() { albumName = "Various Sounds", releasedDate = rng.Next(1993,2023), sales = rng.Next(1, 100000) };
 
             b1.albumList.Add(A1);
             b2.albumList.Add(A2);
@@ -68,7 +71,16 @@ namespace OOD_LabWeek1
         {
             Band selectedBand = LtBxBandNames.SelectedItem as Band;
 
-            if(selectedBand)
+            if(selectedBand != null)
+            {
+                LtBxxAlbumName.ItemsSource = selectedBand.albumList;
+
+
+                TBlkBandDate.Text = String.Format($"formed in {selectedBand.bandDateFormed}");
+
+                TblkBandMembers.Text = String.Format($"Members - {selectedBand.memberName}");
+            }
+
         }
     }
 }
