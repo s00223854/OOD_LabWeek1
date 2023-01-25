@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOD_LabWeek1
 {
-    public class Band :IComparable
+    public abstract class Band :IComparable
     {
         //properties
         public int bandDateFormed { get; set; }
@@ -41,5 +41,40 @@ namespace OOD_LabWeek1
 
             return this.bandName.CompareTo(otherBand.bandName);
         }
+    }
+
+    public class RockBand : Band
+    {
+        public override string ToString()
+        {
+            return base.ToString() + " - Rock Band";
+        }
+    }
+
+    public class PopBand : Band
+    {
+        public override string ToString()
+        {
+            return base.ToString() + " - Pop Band";
+        }
+
+    }
+
+    public class ElectronicBand : Band
+    {
+        public override string ToString()
+        {
+            return base.ToString() + " - Electronic Band";
+        }
+
+    }
+
+    public class IndieBand : Band
+    {
+        public override string ToString()
+        {
+            return base.ToString() + " - Indie Band";
+        }
+
     }
 }

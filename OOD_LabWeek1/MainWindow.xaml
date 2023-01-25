@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        <TextBlock x:Name="TBlkBands" HorizontalAlignment="Left" Margin="124,59,0,0" TextWrapping="Wrap" Text="Bands" VerticalAlignment="Top" Height="39" Width="93" TextAlignment="Center" FontSize="24"/>
-        <TextBlock x:Name="TBlkGenre" HorizontalAlignment="Left" Margin="139,99,0,0" TextWrapping="Wrap" Text="Genre" VerticalAlignment="Top" RenderTransformOrigin="-0.145,0.514" FontSize="14"/>
+        <TextBlock x:Name="TBlkBands" HorizontalAlignment="Left" Margin="77,62,0,0" TextWrapping="Wrap" Text="Bands" VerticalAlignment="Top" Height="39" Width="93" TextAlignment="Center" FontSize="24"/>
+        <TextBlock x:Name="TBlkGenre" HorizontalAlignment="Left" Margin="90,103,0,0" TextWrapping="Wrap" Text="Genre" VerticalAlignment="Top" RenderTransformOrigin="-0.145,0.514" FontSize="14"/>
         <TextBlock x:Name="TblkBandInfo" HorizontalAlignment="Left" Margin="501,66,0,0" TextWrapping="Wrap" Text="Band Information" VerticalAlignment="Top" FontSize="24"/>
         <TextBlock x:Name="TblkAlbum" HorizontalAlignment="Left" Margin="501,217,0,0" TextWrapping="Wrap" Text="Albums" VerticalAlignment="Top" FontSize="24"/>
-        <ListBox x:Name="LtBxBandNames" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="139,130,490,55"/>
+        <ListBox x:Name="LtBxBandNames" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="90,130,490,55"/>
         <ListBox x:Name="LtBxxAlbumName" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="501,255,114,55"/>
-        <ComboBox x:Name="CombxGenreType" HorizontalAlignment="Left" Margin="190,98,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="CombxGenreType" HorizontalAlignment="Left" Margin="176,102,0,0" VerticalAlignment="Top" Width="120"/>
         <TextBlock x:Name="TBlkBandDate" HorizontalAlignment="Left" Margin="501,115,0,0" TextWrapping="Wrap" Text="BandDate" VerticalAlignment="Top" FontSize="14"/>
         <TextBlock x:Name="TblkBandMembers" HorizontalAlignment="Left" Margin="501,154,0,0" TextWrapping="Wrap" Text="BandMembers" VerticalAlignment="Top" FontSize="14" Width="185" Height="58"/>
         <Button x:Name="BtnSave" Content="Save" HorizontalAlignment="Left" Margin="653,384,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.379,1.083" FontSize="14"/>
